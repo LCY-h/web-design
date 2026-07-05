@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>锈湖系列 - 顶部导航</title>
+<style type="text/css">
+/* 全局重置与基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family: "Microsoft Yahei", "SimHei", "楷体", serif;
+}
+
+/* 容器表格样式 */
+.nav-table {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+/* 头部图片单元格 */
+.header-cell {
+    padding: 0;
+    background-color: transparent;
+}
+
+.header-cell img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* 导航按钮单元格 */
+.nav-cell {
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+}
+
+/* 导航链接样式 */
+.nav-link {
+    font-family: "楷体", "Microsoft Yahei", serif;
+    font-size: 28px;
+    color: #8B5A2B; /* 复古棕金色，与下方页面配色统一 */
+    text-decoration: none;
+    padding: 12px 40px;
+    border-radius: 8px;
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+/* 响应式适配 - 移动端 */
+@media (max-width: 768px) {
+    .nav-table {
+        max-width: 100%;
+        margin: 0 10px;
+        border-radius: 8px;
+    }
+
+    .nav-link {
+        font-size: 22px;
+        padding: 10px 20px;
+    }
+
+    .nav-cell {
+        padding: 10px 0;
+    }
+}
+</style>
+</head>
+
+<body>
+<table class="nav-table" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <!-- 表头单元格列数从3改为4，适配新增的导航项 -->
+    <td class="header-cell" colspan="4"><img src="images/header.png" alt="" width="1200" height="140" /></td>
+  </tr>
+  <tr>
+    <td class="nav-cell">
+      <a href="UntitledFrameset-框架页-首页.html" target="_blank" class="nav-link">首页</a>
+    </td>
+    <td class="nav-cell">
+      <a href="UntitledFrameset-框架页-目录.html" target="_blank" class="nav-link">目录</a>
+    </td>
+    <td class="nav-cell">
+      <a href="UntitledFrameset-框架页-关于我们.html" target="_blank" class="nav-link">关于我们</a>
+    </td>
+    <!-- 新增“人物介绍”导航项，格式与其他项完全一致 -->
+    <td class="nav-cell">
+      <a href="D:\Users\LCY\Desktop\UntitledFrameset-框架页-人物介绍.html"target="_blank" class="nav-link">人物介绍</a>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

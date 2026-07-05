@@ -1,0 +1,487 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<style>
+    /* 全局样式重置与基础设置 */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Microsoft Yahei", "SimHei", serif;
+    }
+
+    body {
+        background-color: #ffffff;
+        color: #333333;
+        line-height: 1.6;
+        background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23f5f5f5' fill-opacity='0.8' fill-rule='evenodd'/%3E%3C/svg%3E");
+    }
+
+    /* 容器样式 */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    /* 标题样式 */
+    h2 {
+        text-align: center;
+        color: #8B5A2B; /* 复古棕金色 */
+        margin: 30px 0;
+        font-size: 2.5em;
+        text-shadow: 0 0 8px rgba(139, 90, 43, 0.15);
+        letter-spacing: 2px;
+        font-weight: 700;
+        position: relative;
+    }
+
+    h2::after {
+        content: "";
+        display: block;
+        width: 120px;
+        height: 3px;
+        background-color: #8B5A2B;
+        margin: 15px auto 0;
+        border-radius: 3px;
+    }
+
+    /* 顶部导航栏 */
+    .top-nav {
+        background-color: #f8f8f8;
+        border-radius: 10px;
+        padding: 15px 0;
+        margin-bottom: 30px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        border: 1px solid #eee;
+    }
+
+    .top-nav table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .top-nav td {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .top-nav a {
+        color: #8B5A2B;
+        text-decoration: none;
+        font-size: 1.2em;
+        padding: 8px 25px;
+        border-radius: 6px;
+        font-weight: 500;
+    }
+
+    /* 目录样式 */
+    .catalog {
+        background-color: #f8f8f8;
+        border-radius: 10px;
+        padding: 25px;
+        margin-bottom: 40px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        border: 1px solid #eee;
+    }
+
+    .catalog p {
+        margin: 12px 0;
+        padding-left: 15px;
+        border-left: 3px solid #8B5A2B;
+    }
+
+    .catalog a {
+        color: #333333;
+        text-decoration: none;
+        font-size: 1.1em;
+        font-weight: 400;
+    }
+
+    /* 游戏列表样式 */
+    ol {
+        list-style: none;
+        counter-reset: game-counter;
+    }
+
+    li {
+        counter-increment: game-counter;
+        margin-bottom: 50px;
+        background-color: #fafafa;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+        position: relative;
+        overflow: hidden;
+        border: 1px solid #f0f0f0;
+    }
+
+    li::before {
+        content: counter(game-counter);
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 40px;
+        height: 40px;
+        background-color: #8B5A2B;
+        color: #ffffff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2em;
+        font-weight: bold;
+        box-shadow: 0 2px 8px rgba(139, 90, 43, 0.3);
+    }
+
+    /* 游戏标题锚点样式 */
+    li > a[name] {
+        display: block;
+        font-size: 1.8em;
+        color: #8B5A2B;
+        margin-bottom: 20px;
+        margin-left: 60px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #f0f0f0;
+        font-weight: 600;
+    }
+
+    /* 表格样式优化 */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 15px 0;
+    }
+
+    td {
+        padding: 15px;
+        vertical-align: middle;
+        color: #444444;
+    }
+
+    /* 图片样式 */
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        border: 1px solid #eee;
+    }
+
+    /* 返回顶部/目录链接样式 */
+    .back-link {
+        display: inline-block;
+        margin-top: 15px;
+        color: #ffffff;
+        background-color: #8B5A2B;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 6px;
+        font-weight: 500;
+        box-shadow: 0 2px 8px rgba(139, 90, 43, 0.2);
+    }
+
+    /* 段落文本样式 */
+    p {
+        margin: 10px 0;
+        font-size: 1.05em;
+        line-height: 1.8;
+        color: #555555;
+        text-align: justify;
+    }
+
+    /* 响应式适配 */
+    @media (max-width: 768px) {
+        .container {
+            padding: 15px;
+            margin: 10px;
+        }
+
+        h2 {
+            font-size: 2em;
+        }
+
+        li {
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        li > a[name] {
+            font-size: 1.5em;
+            margin-left: 0;
+            text-align: center;
+            padding-bottom: 15px;
+        }
+
+        li::before {
+            display: none;
+        }
+
+        td {
+            display: block;
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        .top-nav a {
+            padding: 8px 15px;
+            font-size: 1.1em;
+        }
+
+        .catalog {
+            padding: 20px;
+        }
+
+        .back-link {
+            padding: 8px 15px;
+            font-size: 0.95em;
+        }
+    }
+
+    /* 顶部返回按钮特殊样式 */
+    p:last-child .back-link {
+        display: block;
+        width: fit-content;
+        margin: 20px auto 0;
+    }
+</style>
+</head>
+
+<body>
+<div class="container">
+    <h2>锈湖系列</h2>
+
+    <!-- 顶部导航 --><!-- 目录区域 -->
+    <div class="catalog">
+        <p>1.<a href="#b1">方块逃脱（Cube Escape）</a></p>
+        <p>2.<a href="#b2">锈湖：旅馆（Hotel）</a></p>
+        <p>3.<a href="#b3">锈湖：根源（Roots）</a></p>
+        <p>4.<a href="#b4">锈湖：天堂岛（Paradise）</a></p>
+        <p>5.<a href="#b5">白门（The White Door）</a></p>
+        <p>6.<a href="#b6">内在往昔（The Past Within）</a></p>
+        <p>7.<a href="#b7">地铁繁花（Underground Blossom）</a></p>
+        <p>8.<a href="#b8">悖论（Paradox）</a></p>
+    </div>
+
+  <h2>锈湖系列游戏简介</h2>
+    <ol>
+        <li>
+            <a name="b1" id="b1">方块逃脱（Cube Escape）</a>
+            <table border="0" cellpadding="0" cellspacing="10">
+                <tr>
+                    <td width="601">《方块逃脱》是荷兰工作室 Rusty Lake 于 2015 年起推出的免费短篇密室逃脱系列，共含《四季》《湖畔》《案件 23》等 9 个独立篇章，后整合为《Cube Escape Collection》登陆 Steam。</td>
+                    <td width="361"><img src="../../../锈湖官方/方块+往日+/cube-escape-seasons-en.jpg" width="335" height="112" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">游戏以点击式解谜为核心，玩家在封闭房间中搜集道具、破解机关，逐步揭开锈湖世界的神秘面纱。故事围绕记忆方块、炼金术、永生仪式展开，串联起侦探 Dale、女孩 Laura、鹦鹉 Harvey 等核心角色的命运，铺垫锈湖宇宙的基础世界观。手绘暗黑画风搭配悬疑配乐，氛围诡谲压抑，谜题设计精巧且环环相扣，每个篇章既独立成章，又暗藏关联，碎片化叙事逐步拼凑出 “锈湖需吞噬黑白记忆维持存续” 的核心设定。</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <table border="0" cellspacing="10" cellpadding="0">
+                            <tr>
+                                <td width="365" height="112"><img src="../../../锈湖官方/方块+往日+/cube-escape-collection-en.jpg" width="334" height="112" /></td>
+                                <td width="583" valign="top">
+                                    <p>作为系列开山之作，它以低成本 Flash 游戏形式诞生，却凭借独特美学与烧脑剧情积累大量粉丝，为后续付费长篇奠定口碑与世界观基础。</p>
+                                    <p><a href="#top" class="back-link">返回目录</a></p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </li>
+
+        <li>
+            <a name="b2" id="b2">锈湖：旅馆（Hotel）</a>
+            <table border="0" cellpadding="0" cellspacing="10">
+                <tr>
+                    <td width="210"><img src="../../../锈湖官方/旅馆/logo.png" width="210" height="150" /></td>
+                    <td width="752">《锈湖：旅馆》是 2015 年发行的系列首款付费长篇，承接《方块逃脱》世界观，时间线设定于 1893 年。故事发生在锈湖中央的孤岛旅馆，主角为鹦鹉 Harvey（旅馆服务员），受旅馆主人猫头鹰先生（重生的 Jacob Eilander）指使，以 “五场盛宴” 为名，猎杀五位化身动物的家族仇人（鹿、兔、鸽、野鸡、野猪），提取其记忆方块献祭锈湖。游戏分五幕，每幕对应一位客人的房间谋杀案，玩家需在客房内破解专属谜题、收集杀人道具，完成 “密室猎杀”。</td>
+                </tr>
+                <tr>
+                    <td colspan="2">延续系列暗黑童话手绘风格，动物拟人化设定荒诞诡异，每个房间谜题紧扣客人身份与原罪，配乐氛围感拉满。作为复仇主线开篇，它揭露了 Eilander 家族为永生献祭长子的黑暗历史，将 “记忆掠夺”“永生交易” 的核心矛盾具象化，奠定系列 “悬疑 + 暗黑 + 人性讽刺” 的基调。</td>
+                </tr>
+                <tr>
+                    <td height="171" colspan="2">
+                        <table border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td><a href="#top" class="back-link">返回目录</a></td>
+                                <td><img src="../../../锈湖官方/旅馆/8be99bb75e3ba660ba225cf5260d9e377d7e4a60.jpg" width="990" height="144" /></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </li>
+
+        <li>
+            <a name="b3" id="b3">锈湖：根源（Roots）</a>
+            <table border="0" cellpadding="0" cellspacing="10">
+                <tr>
+                    <td width="450"><img src="../../../锈湖官方/root/ss_808a22fcb1810621c0373cadc8049ce02aa2dcd0.600x338.jpg" width="450" height="253" /></td>
+                    <td width="147">《锈湖：根源》是 2016 年推出的系列第二部付费大作，时间跨度近 80 年（1860-1930），聚焦 Vanderboom 家族四代人的黑暗史诗，补全锈湖宇宙的 “起源” 剧情。</td>
+                    <td width="453"><img src="../../../锈湖官方/root/ss_a7086bd7d7f0bf6ae4c0c0badec344c06fe328b2.600x338.jpg" width="450" height="253" /></td>
+                </tr>
+                <tr>
+                    <td colspan="3">故事始于 1860 年，James Vanderboom 继承叔叔遗产，种下神秘种子，开启家族与锈湖的宿命绑定。玩家以家族树解锁为核心玩法，通过 33 个关卡，体验家族成员从出生、成长、联姻到死亡的全过程，见证炼金术、记忆实验、血亲相残等禁忌事件Rusty Lake。核心剧情围绕 William 与 Aldous 兄弟的永生实验展开：William 炼制不死药后死亡化为大黑，Aldous 服药变身乌鸦先生，家族后代沦为锈湖的 “记忆养料”。本作首次采用家族树叙事结构，关卡设计与人物命运深度绑定，谜题涵盖草药炼制、星座解谜、人偶机关等，手绘风格细腻暗黑，剧情残酷而深沉，被称为锈湖系列 “剧情最丰满、世界观最完整” 的一作。</td>
+                </tr>
+                <tr>
+                    <td height="500" colspan="3">
+
+                        <table border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td width="1033"><img src="../../../锈湖官方/root/icon1024x500.png" width="1024" height="500" /></td>
+                                <td width="37"><a href="#top" class="back-link">返回目录</a></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </li>
+
+        <li>
+            <a name="b4" id="b4">锈湖：天堂岛（Paradise）</a>
+            <table border="0" cellspacing="10" cellpadding="0">
+                <tr>
+                    <td colspan="2">《锈湖：天堂岛》是 2018 年发行的系列第三部付费作品，时间线最早（18 世纪），作为《锈湖：旅馆》的前传，揭露猫头鹰先生的起源与 Eilander 家族的献祭诅咒Steam。故事发生在被埃及十灾诅咒的天堂岛，主角 Jacob（家族长子）在母亲离奇死亡后返乡，发现岛屿接连爆发血灾、蛙灾、蝗灾等十场灾难，需解开谜题、参与家族仪式，揭开母亲死亡与诅咒的真相。</td>
+                </tr>
+                <tr>
+                    <td width="586"><img src="../../../锈湖官方/天堂岛/header_586x192.jpg" width="586" height="192" /></td>
+                    <td width="440">玩家扮演 Jacob，在十个灾难题材关卡中探索岛屿、破解机关，逐步发现家族为追求永生，将自己献祭的阴谋：母亲为救他牺牲，家族成员将他活活烧死，他戴猫头鹰面具重生为猫头鹰先生，后续建立锈湖旅馆复仇。本作以粉笔画风重构场景，十灾关卡设计工整，每灾对应专属谜题与配乐，氛围原始而诡谲，将 “献祭与永生”“背叛与复仇” 的核心矛盾推向高潮，完成锈湖宇宙 “过去 - 现在 - 未来” 的闭环叙事。</td>
+                </tr>
+                <tr>
+                    <td height="136" colspan="2">
+                        <table border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td width="158"><a href="#top" class="back-link">返回目录</a></td>
+                                <td width="800"><img src="../../../锈湖官方/header.png" width="990" height="116" /></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </li>
+
+        <li>
+            <a name="b5" id="b5">白门（The White Door）</a>
+            <table border="0" cellspacing="10" cellpadding="0">
+                <tr>
+                    <td width="240">《白门》是 2020 年发行的系列外传式作品，时间线设定于 1972 年，聚焦《方块逃脱》女主 Laura 的前男友 Robert Hill（Bob）的失忆救赎故事。玩家扮演 Bob，在纯白疗养院中度过七天严格作息（起床、用餐、记忆测试、梦境探索、睡眠），通过白天的现实互动与夜晚的梦境解谜，找回失去的记忆，直面女友 Laura 自杀、自己被锈湖势力操控的真相。</td>
+                    <td width="734"><img src="../../../锈湖官方/方块+往日+/TheWhiteDoor-routine.gif" width="480" height="286" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">游戏首创黑白分屏设计：左屏为现实纯白房间，右屏为彩色梦境场景，简约线稿画风搭配高对比度色彩，视觉冲击力极强。谜题紧扣 “记忆碎片”，梦境场景还原 Bob 与 Laura 的甜蜜过往、痛苦分离及被大黑侵蚀的恐惧，叙事细腻而伤感，打破系列一贯的冰冷悬疑，注入强烈的情感共鸣。</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <table border="0" cellspacing="10" cellpadding="0">
+                            <tr>
+                                <td width="334"><img src="../../../锈湖官方/方块+往日+/the-white-door-en.jpg" width="334" height="112" /></td>
+                                <td width="612">
+                                    <p>作为外传，它补全了 Laura 悲剧的连锁反应，揭示锈湖势力对普通人的精神操控，为后续剧情埋下伏笔。</p>
+                                    <p><a href="#top" class="back-link">返回目录</a></p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </li>
+
+        <li>
+            <a name="b6" id="b6">内在往昔（The Past Within）</a>
+            <table border="0" cellspacing="10" cellpadding="0">
+                <tr>
+                    <td>《内在往昔》是 2022 年推出的系列首款双人合作解谜大作，时间线衔接《锈湖：根源》，围绕 Vanderboom 家族后裔 Rose 展开，聚焦其父亲 Albert（《根源》反派）的灵魂重生计划。游戏强制双人协作，两位玩家分别扮演 “过去”（2D 经典画风）与 “未来”（3D 全新视角）的探索者，身处不同维度，只能通过语音沟通共享线索，破解跨时空谜题。核心目标是合力解开神秘盒子与房间机关，收集金方块、黑方块，拼接 Albert 的灵魂与肉体，完成重生仪式。</td>
+                </tr>
+                <tr>
+                    <td height="501">
+                        <table border="0" cellspacing="1" cellpadding="0">
+                            <tr>
+                                <td width="456" height="498" valign="top"><img src="../../../锈湖官方/方块+往日+/Steam_anow_081122.gif" width="450" height="494" /></td>
+                                <td width="486" valign="top">
+                                    <table width="400" border="0" cellspacing="5" cellpadding="0">
+                                        <tr>
+                                            <td colspan="2">本作融合 2D 手绘与 3D 渲染，黑白基调搭配局部色彩，视觉风格兼具怀旧感与新鲜感；谜题设计围绕 “时空联动”，过去的操作影响未来，未来的线索指引过去，极度考验玩家的沟通默契与逻辑思维。作为系列里程碑式作品，它首次突破单人解谜局限，将锈湖宇宙的时空复杂性具象化，剧情串联家族四代人的宿命，结局震撼而充满留白。</td>
+                                        </tr>
+                                        <tr>
+                                            <td height="350"><a href="#top" class="back-link">返回目录</a></td>
+                                            <td><img src="../../../锈湖官方/方块+往日+/unknown.png" width="550" height="350" /></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </li>
+
+        <li>
+            <a name="b7" id="b7">地铁繁花（Underground Blossom）</a>
+            <table border="0" cellspacing="10" cellpadding="0">
+                <tr>
+                    <td width="802"><img src="../../../锈湖官方/地铁/hq_Harveys-egg-2024.gif" width="802" height="452" /></td>
+                    <td width="172">《地铁繁花》是 2023 年发行的系列女主中心叙事作品，时间线贯穿 Laura Vanderboom 的一生，以 “地铁旅行” 隐喻人生旅程，补全《方块逃脱》女主的完整人生轨迹Rusty Lake。玩家扮演 Laura，乘坐锈湖地铁，穿梭于七个风格迥异的车站，每个车站对应人生重要阶段（出生、童年、青年、恋爱、崩溃、死亡），通过破解谜题、收集车票，解锁人生记忆碎片，直面抑郁、创伤与锈湖势力的侵蚀。</td>
+                </tr>
+                <tr>
+                    <td height="286" colspan="2">
+                        <table border="0" cellspacing="10" cellpadding="0">
+                            <tr>
+                                <td width="354">
+                                    <p>游戏延续系列经典手绘风格，地铁站场景细节拉满，从襁褓站的温馨到终焉站的诡寂，视觉设计紧扣人生阶段氛围；谜题融入大量前作彩蛋（如哈维的笼子、Vanderboom 家族照片），配乐以大提琴为主，哀伤而治愈。作为 Laura 的个人传记式作品，它解释了她抑郁自杀的深层原因（家族诅咒、记忆掠夺、精神操控），将个人悲剧与锈湖宇宙的黑暗规则绑定，为系列核心悲剧画上完整句号。</p>
+                                    <p><a href="#top" class="back-link">返回目录</a></p>
+                                </td>
+                                <td width="600"><img src="../../../锈湖官方/地铁/banner_metro_arriving_1_2.gif" width="600" height="248" /></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </li>
+        <li>
+            <a name="b8" id="b8">悖论（Paradox）</a>
+            <table border="0" cellspacing="10" cellpadding="0">
+                <tr>
+                    <td width="561">《悖论》是 2018 年发行的方块逃脱系列终章，分两章，时间线衔接《案件 23》，聚焦侦探 Dale Vandermeer 的最终命运，融合游戏与真人短片，打破虚拟与现实的边界。故事中，Dale 在诡异房间醒来，失去记忆，发现自己陷入老对手（乌鸦先生、猫头鹰先生）设计的平行宇宙陷阱，需破解层层谜题，逃离房间、恢复记忆，揭开锈湖的终极秘密。</td>
+                    <td width="460"><img src="../../../锈湖官方/悖论/header (4).jpg" width="460" height="215" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <img src="../../../锈湖官方/悖论/e3ec00c0daec6f911862906a87e660147df4a1e9_960x311.png" width="900" height="292" style="margin: 10px 0;" />
+                        游戏首创游戏与真人短片联动玩法：18 分钟真人短片中的符号、时间、道具，是游戏解谜的关键线索；玩家需在游戏与短片间反复切换，寻找隐藏成就与剧情彩蛋。谜题设计难度巅峰，涵盖镜像机关、胶片投影、符号解密等，手绘暗黑画风搭配真人出演，悬疑氛围拉满；剧情揭露 Dale 的宿命 —— 他从出生起就被锈湖势力选中，成为记忆容器，最终难逃被献祭的命运。
+                    </td>
+                </tr>
+
+                <tr>
+                    <td height="330" colspan="2">
+                        <table border="0" cellspacing="10" cellpadding="0">
+                            <tr>
+                                <td width="900"><ol>
+                                  <img src="../../../锈湖官方/悖论/cube-escape-paradox-trailer.png" width="900" height="552" />
+                                </ol></td>
+                                <td width="109">
+                                    <p>作为《方块逃脱》系列收官之作，它串联前作所有伏笔，将锈湖宇宙的 “宿命论” 与 “绝望感” 推向极致，为 Dale 的故事画上悲剧句号。</p>
+                                    <p><a href="#top" class="back-link">返回目录</a></p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <p><a href="#top" class="back-link">返回顶部</a></p>
+        </li>
+    </ol>
+</div>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+ <meta charset="utf-8">
+    <title>FAQ帮助&关于本站 - 锈湖专题</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+	        background-color: #221e1c;
+	        color: #d8c9b9;
+	        font-family: "楷体", "STKaiti", "华文楷体", serif;
+	        line-height: 1.8;
+	        background-image: url(iconBlack.png);
+	        background-size: cover;
+	        background-repeat: no-repeat;
+	        background-position: center;
+	        background-attachment: fixed;
+        }
+        /* 全局表格基础样式 */
+        table{
+            border-collapse: collapse;
+            width: 85%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        td{
+            padding: 10px;
+        }
+
+        /* 头部标题表格 */
+        .top-table{
+            margin-top: 40px;
+            border-bottom: 1px solid #633c3c;
+        }
+        .top-title{
+            text-align: center;
+            font-family: "Amatic SC", "楷体", serif;
+	        color: #FFFF99;
+	        letter-spacing: 5px;
+	        font-size: 42px;
+	        font-weight: 700;
+            padding: 0 0 20px 0;
+        }
+
+        /* 主体内容外层表格 */
+        .main-table{
+            background-color: #2c2724;
+            border: 1px solid #503333;
+            border-radius: 6px;
+            margin-top: 35px;
+        }
+        .main-table td{
+            padding: 15px 35px;
+        }
+
+        h3{
+            font-family: "Amatic SC", "楷体", serif;
+            color: #B89681;
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin: 15px 0 8px;
+            transition: color 0.3s;
+        }
+        h3:hover{
+            color: #CCFF99;
+        }
+        p{
+            margin-bottom:14px;
+            text-indent:2em;
+            font-size: 16px;
+        }
+
+        /* FAQ 标题表格 */
+        .faq-title-table{
+            width: 100%;
+            margin: 45px 0 20px 0;
+        }
+        .faq-title-td{
+            text-align:center;
+            font-family: "Amatic SC", "楷体", serif;
+            color:#c97070;
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            padding: 10px 0;
+        }
+
+        /* FAQ 问答表格（黄色虚线边框） */
+        .faq-item-table{
+            width: 100%;
+            margin-bottom: 12px;
+        }
+        .faq-item-table td{
+            border: 1px dashed #FFFF00;
+            padding: 16px 24px;
+            background-color: #332d2a;
+        }
+        .q-td{
+            background-color: #3d3531;
+            font-family: "Amatic SC", "楷体", serif;
+            color:#e2d3c0;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .q-td::before{
+            content: '▶';
+            display: inline-block;
+            margin-right: 12px;
+            font-size: 12px;
+        }
+        .a-td{
+            color: #c0b3a2;
+            font-size: 16px;
+        }
+
+        /* 返回按钮表格 */
+        .btn-table{
+            width: 100%;
+            margin-top: 40px;
+        }
+        .btn-td{
+            text-align: center;
+        }
+        a{
+            font-family: "Amatic SC", "楷体", serif;
+            display:inline-block;
+            padding:10px 26px;
+            background:#703a3a;
+            color:#fff;
+            text-decoration:none;
+            border-radius:3px;
+            font-size: 20px;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+        a:hover{
+            background:#944b4b;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+        }
+
+        /* 页脚表格 */
+        .foot-table{
+            border-top:1px solid #442e2e;
+            margin-top: 50px;
+        }
+        .foot-td{
+            text-align:center;
+            font-size:14px;
+            color:#998877;
+            padding: 20px 0;
+        }
+        .s1 {
+            color: #CCFF66;
+        }
+
+        /* 返回顶部按钮 */
+        #topBtn{
+            position:fixed;
+            right:30px;
+            bottom:30px;
+            padding:9px 16px;
+            background:#703a3a;
+            color:#fff;
+            border:none;
+            border-radius:4px;
+            cursor:pointer;
+            display:none;
+            font-family: "Amatic SC", "楷体", serif;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+        #topBtn:hover{
+            background:#944b4b;
+        }
+        body,td,th {
+	        font-family: "楷体", STKaiti, "华文楷体", serif;
+        }
+    .main-table tr td .btn-table tr .btn-td {
+	font-size: 24px;
+}
+    </style>
+</head>
+<body>
+    <!-- 1. 顶部标题表格 -->
+<table class="top-table">
+        <tr>
+            <td class="top-title">关于本站 | FAQ帮助中心<a name="顶部" id="顶部"></a></td>
+        </tr>
+    </table>
+
+    <!-- 2. 主体内容总表格 -->
+<table class="main-table">
+        <tr>
+            <td>
+                <h3>一、网站简介</h3>
+                <p>本网站是以解谜游戏《锈湖(Rusty Lake)》为主题搭建，整合锈湖系列世界观介绍、游戏剧情解析、全系列作品盘点、人物图鉴、隐藏彩蛋等内容，面向锈湖解谜爱好者。网站整体风格参考原作复古暗黑画风，配色、排版贴合游戏阴冷悬疑的美术设定。</p>
+
+                <h3>二、网站栏目说明</h3>
+                <p>1.首页：锈湖系列海报轮播、新作推荐、热门剧情导读；</p>
+                <p>2.作品大全：锈湖全系列游戏介绍，包含根源、天堂岛、旅馆等正传；</p>
+                <p>3.人物图鉴：乌鸦先生、劳拉、阿尔伯特等关键角色背景资料；</p>
+                <p>4.彩蛋解析：游戏隐藏细节、剧情伏笔梳理；</p>
+                <p>5.帮助页面：本站介绍+常见问题FAQ。</p>
+
+                <h3>三、课程制作总结</h3>
+                <p>本次项目使用HTML表格+CSS完成页面整体布局，使用JavaScript实现返回顶部交互效果。制作过程中遇到图片适配、页面布局错位、风格统一等问题，通过调整表格属性与样式逐一解决。通过本次作业巩固了表格布局、hover交互、页面配色等知识点。</p>
+
+                <h3>四、版权免责声明</h3>
+                <p>本站所有原画、游戏名称、人物形象、剧情素材版权均归属Rusty Lake开发工作室，所有内容仅用于高校网页设计课程作业学习使用，不存在任何商业用途，不用于盈利。</p>
+
+                <!-- FAQ 标题表格 -->
+                <table class="faq-title-table">
+                    <tr>
+                        <td class="faq-title-td">常见问题FAQ</td>
+                    </tr>
+                </table>
+
+                <!-- FAQ 1 问答表格 -->
+                <table class="faq-item-table">
+                    <tr>
+                        <td height="74" class="q-td">怎么保存游戏壁纸？</td>
+                    </tr>
+                    <tr>
+                        <td class="a-td">电脑端右键点击壁纸图片，选择图片另存为即可保存；移动端长按图片，在弹出菜单里选择保存图片。本站全部壁纸均可免费保存，仅限个人收藏使用。</td>
+                    </tr>
+                </table>
+
+                <!-- FAQ 2 问答表格 -->
+                <table class="faq-item-table">
+                    <tr>
+                        <td class="q-td">攻略内容更新周期？</td>
+                    </tr>
+                    <tr>
+                        <td class="a-td">本站锈湖攻略根据官方新作、玩家新发现彩蛋不定期更新，常规每月更新1~2次，新DLC上线时会加急补充完整通关攻略。</td>
+                    </tr>
+                </table>
+
+                <!-- FAQ 3 问答表格 -->
+                <table class="faq-item-table">
+                    <tr>
+                        <td class="q-td">角色资料来源？</td>
+                    </tr>
+                    <tr>
+                        <td class="a-td">角色资料整理自锈湖官方原作、官方设定文案、海外制作者访谈以及资深玩家社区考据内容，内容仅供学习观赏，原画版权归锈湖制作组所有。</td>
+                    </tr>
+                </table>
+
+                <!-- 返回首页按钮表格 -->
+                <table class="btn-table">
+                    <tr>
+                        <td class="btn-td"><a href="UntitledFrameset-框架页-首页.html" target="_blank">返回首页</a><a href="#顶部">返回顶部</a></td>
+                    </tr>
+                </table>
+          </td>
+  </tr>
+</table>
+
+    <!-- 3. 页脚版权表格 -->
+<table class="foot-table">
+        <tr>
+            <td class="foot-td s1">©2026 锈湖专题 |</td>
+        </tr>
+    </table>
+
+    <!-- 返回顶部悬浮按钮 -->
+    <button id="topBtn">回到顶部</button>
+
+<script>
+    // 仅保留返回顶部功能
+    var topBtn = document.getElementById('topBtn');
+    if (topBtn) {
+        window.onscroll = function() {
+            if (document.documentElement.scrollTop > 300) {
+                topBtn.style.display = 'block';
+            } else {
+                topBtn.style.display = 'none';
+            }
+        }
+        topBtn.onclick = function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    }
+</script>
+</body>
+</html>
