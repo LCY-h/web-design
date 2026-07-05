@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>登陆页面</title>
+<style type="text/css">
+body {
+	background-image: url(1.jpg);
+	background-repeat: no-repeat;
+	background-size:cover;
+}
+.title-row {
+	height: 80px;  
+	line-height: 80px; 
+	margin: 0;
+	padding: 0;
+}
+.d {
+	color: #FFC;
+	font-size: 36px;
+	font-family: Verdana, Geneva, sans-serif;
+}
+body,td,th {
+	font-size: 50px;
+	color: #FFC;
+	font-family: Verdana, Geneva, sans-serif;
+	text-align: center;
+}
+.d {
+	font-size: 24px;
+	font-family: Verdana, Geneva, sans-serif;
+}
+#注册, #登录 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 36px;
+	color: #FFC;
+	background-color: #969;
+	border: none;
+	padding: 8px 20px;
+	cursor: pointer;
+}
+.d1 {
+	font-size: 24px;
+	font-family: "仿宋";
+}
+.table-container {
+    height: 518px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+	align-items: center;
+}
+  
+#email, #password {
+    height: 60px;
+    width: 350px;
+    font-size: 24px;
+    padding: 0 15px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+#email:focus, #password:focus {
+     height: 60px;
+    width: 350px;
+    font-size: 24px;
+    padding: 0 15px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+.left-box {
+    background-color: rgba(80,68,82,0.95); 
+}
+.right-box {
+    background-color: rgba(113,100,116,0.85); 
+}
+.login-title {
+    background-color: rgba(95,82,97,0.9); 
+}
+table {
+    border-collapse: collapse;
+}
+
+</style>
+<script type="text/javascript">
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+</script>
+</head>
+
+<body>
+<table width="879" height="603" border="4" align="center" cellpadding="4" cellspacing="0">
+  <tr>
+     <th width="446" class="left-box" scope="col">
+      <div class="table-container">
+        <table width="446" border="0" height="100%">
+          <tr class="title-row">
+            <td width="440">WELCOME</td>
+          </tr>
+          <tr>
+            <td class="d"><p>RUSTY LAKE</p></td>
+          </tr>
+          <tr>
+            <td><img src="2.jpg" width="200" height="190" /></td>
+          </tr>
+          <tr>
+            <td height="80">
+              <input name="注册" type="submit" id="注册" onclick="MM_goToURL('parent','1注册页面.html');return document.MM_returnValue" value="注册" /></td>
+          </tr>
+        </table>
+      </div>
+    </th>
+    </th>
+         <th width="367" class="right-box" scope="col">
+      <table width="353" height="518" border="0">
+        <tr class="title-row login-title">
+          <th colspan="2" scope="col">LOGIN</th>
+        </tr>
+        <tr><form class="login-form" id="loginForm" method="get" action="D:\Users\LCY\Desktop\UntitledFrameset-框架页-首页.html">
+          <td height="69" class="d1">邮箱</td>
+          <td>
+            <input type="email" name="email" id="email" placeholder="请输入您的邮箱" required />
+          </td>
+        </tr>
+        <tr>
+          <td class="d1">密码</td>
+          <td>
+            <input name="password" type="password" id="password" placeholder="请输入您的密码" required />
+          </td>
+        </tr>
+        <tr>
+          <td height="80" colspan="2" bgcolor="rgba(113,100,116,0.85)" class="login-title">
+            <input name="button" type="submit" id="登录" value="登录" />
+          </td>
+        </tr>
+      </table>
+    </th>
+  </tr>
+</table>
+</body>
+</html>
