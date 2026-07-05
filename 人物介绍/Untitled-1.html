@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>人物关系介绍页面</title>
+<style>
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	font-family:"Microsoft Yahei",sans-serif;
+}
+body{
+	padding:20px;
+	background:#3A312A;
+}
+
+.top-img-box{
+	position:relative;
+	max-width:1000px;
+	margin:0 auto 60px;
+	padding:10px; 
+	background:#52463C;
+	border:1px solid #8A7B6B;
+}
+.relation-img{
+	width:100%;
+	display:block;
+	border:1px solid #8A7B6B;
+}
+
+.anchor-point{
+	position: absolute;
+	width: 109px;
+	height: 72px;
+	cursor: pointer;
+
+	background: rgba(0,0,0,0);
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	color:#fff;
+}
+
+.anchor-point:hover{
+	background: rgba(255,220,120,0.35);
+	border-radius: 4px;
+	color: #D5CE5E;
+}
+
+.p-Robert{
+	top: 293px;
+	left: 13px;
+	font-family: "华文中宋";
+	font-size: 36px;
+}
+.p-Laura{
+	top: 839px;
+	left: 578px;
+	font-family: "华文中宋";
+	font-size: 36px;
+	color: #FC6;
+}
+.p-Frank{
+	top: 634px;
+	left: 189px;
+	font-family: "华文中宋";
+	font-size: 36px;
+}
+.p-Leonard{
+	top: 847px;
+	left: 410px;
+	font-family: "华文中宋";
+	font-size: 36px;
+	color: #FC6;
+}
+.p-Rose{
+	top: 1231px;
+	left: 696px;
+	font-family: "华文中宋";
+	font-size: 36px;
+}
+.p-Emma{
+	top: 304px;
+	left: 540px;
+	font-size: 36px;
+	color: #FF9900;
+}
+.p-Ida{
+	top: 959px;
+	left: 223px;
+	font-family: "华文中宋";
+	font-size: 36px;
+	color: #FC6;
+}
+.p-Samuel{
+	top: 1233px;
+	left: 250px;
+	font-family: "华文中宋";
+	font-size: 36px;
+	color: #FC6;
+}
+.p-Albert{
+	top: 572px;
+	left: 873px;
+	font-family: "华文中宋";
+	font-size: 36px;
+	color: #FC6;
+}
+.p-Mary{
+	top: 544px;
+	left: 641px;
+	font-family: "华文中宋";
+	font-size: 36px;
+}
+.p-James{
+	top: 854px;
+	left: 810px;
+	font-family: "华文中宋";
+	font-size: 36px;
+}
+
+.intro-table{
+	max-width:1200px;
+	margin:0 auto;
+	border-collapse:collapse;
+	width:100%;
+	background:#EAE3DB; 
+	box-shadow:0 0 8px rgba(0,0,0,0.25);
+	border:1px solid #8A7B6B; 
+}
+.intro-table tr{
+	border-bottom:1px solid #8A7B6B; 
+}
+.intro-table td{
+	padding: 25px;
+	vertical-align: top;
+	font-size: 36px;
+	font-family: "华文中宋";
+}
+.td-img{
+	width:220px;
+}
+.td-img img{
+	max-width:100%;
+	border-radius:6px;
+	border:1px solid #8A7B6B; 
+}
+.td-text h3{
+	font-size: 36px;
+	color: #222;
+	margin-bottom: 10px;
+}
+.td-text p{
+	line-height: 1.8;
+	color: #444;
+	font-size: 24px;
+	font-family: "华文中宋";
+}
+
+#apDiv1 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 1;
+	left: 14px;
+	top: 1457px;
+}
+#apDiv2 {
+	position: absolute;
+	left: 671px;
+	top: 46px;
+	width: 449px;
+	height: 73px;
+	z-index: 1;
+	font-size: 45px;
+	font-family: "华文中宋";
+	color: #D5CE5E;
+	font-weight: bold;
+}
+.s1 {
+	text-align: right;
+}
+.top-img-box .anchor-point.p-Leonard a {
+	color: #FC6;
+}
+.intro-table tr .td-img p {
+	font-family: "华文中宋";
+}
+</style>
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+<body onLoad="MM_preloadImages('image/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&amp;MsgID=2113352909211563542&amp;skey=@crypt_f91edd96_7fb38724922b679644ac0f93cdfedbc9&amp;mmweb_appid=wx_webfilehelper.jpg','image/屏幕截图 2026-06-14 142553.png','image/屏幕截图 2026-06-14 142612.png','image/屏幕截图 2026-06-14 142650.png','image/屏幕截图 2026-06-14 142839.png')">
+
+<div class="top-img-box">
+	<img src="image/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=2113352909211563542&skey=@crypt_f91edd96_7fb38724922b679644ac0f93cdfedbc9&mmweb_appid=wx_webfilehelper.jpg" alt="人物关系图" class="relation-img">
+  <a href="#Robert">
+  <div class="anchor-point p-Robert">罗伯特</div></a>
+  <a href="#Laura">
+  <div class="anchor-point p-Laura">塞穆尔</div></a>
+	<a href="#Frank">
+	<div class="anchor-point p-Frank">佛拉克</div></a>
+	<div class="anchor-point p-Leonard"><a href="#I11">艾达</a></div>
+	<a href="#Rose">
+	<div class="anchor-point p-Rose">杰姆斯</div></a>
+  <a href="#Laura">
+	<div class="anchor-point p-Emma">劳拉</div></a>
+	<a href="#Ida">
+	<div class="anchor-point p-Ida">艾玛</div></a>
+  <a href="#Samuel">
+  <div class="anchor-point p-Samuel">玛丽</div></a>
+  <a href="#Albert">
+  <div class="anchor-point p-Albert">罗斯</div></a>
+	<a href="#Mary">
+	<div class="anchor-point p-Mary">伦纳德</div></a>
+	<a href="#James">
+	<div class="anchor-point p-James">艾伯特</div></a>
+</div>
+->
+<div id="apDiv2">Vanderboom家族<a name="顶部1" id="顶部"></a></div>
+<table class="intro-table">
+	<!-- Robert -->
+	<tr>
+	  <td width="303" height="365" class="td-img"><p>人物介绍视频</p>
+      <p>&nbsp;</p>
+      <p><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image10','','image/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=2113352909211563542&skey=@crypt_f91edd96_7fb38724922b679644ac0f93cdfedbc9&mmweb_appid=wx_webfilehelper.jpg',1)"><img src="image/c2bfef050a9da62a539b74ee1bf59a50.jpg" width="238" height="231" id="Image10"></a></p></td>
+	 <td width="600" height="365" class="td-video">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+
+  <video controls width="233">
+    <source src="37803068628-1-192.mp4" type="video/mp4">
+    浏览器不支持MP4视频播放 </video>
+    <style>
+.td-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+</style></td>
+  </tr>
+	<tr id="Robert">
+		<td class="td-img">
+			<!-- 此处插入人物单独头像图片 --><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('1','','image/屏幕截图 2026-06-14 142553.png',1)"><img src="image/屏幕截图 2026-06-14 142455.png" width="227" height="224" id="1"></a></td>
+		<td class="td-text">
+			<h3>Robert<a name="罗伯特" id="罗伯特"></a></h3>
+			<p>Robert 是范德布姆家族的早期成员之一，也是推动家族悲剧的无名见证者。他见证了詹姆斯・范德布姆带着永生药回到锈湖，看着炼金术的种子在这片诡异的湖边生根发芽。他看似是无关紧要的路人，却默默目睹了家族三代人因永生的执念走向疯狂与毁灭。<a href="#顶部1">返回顶部</a></p></td>
+	</tr>
+	<!-- Laura -->
+	<tr id="Laura">
+		<td class="td-img"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image10','','image/屏幕截图 2026-06-14 142612.png',1)"></a><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('2','','image/屏幕截图 2026-06-14 142839.png',1)"><img src="image/屏幕截图 2026-06-14 142553.png" width="226" height="220" id="2"></a></td>
+		<td class="td-text">
+			<h3>Laura<a id="劳拉"></a></h3>
+			<p>劳拉是《逃离方块》系列的核心主角，也是范德布姆家族悲剧的最终产物。她是 Rose 的女儿，同时也是家族初代成员 William Vanderboom 的转世。她从小被母亲遗弃，在抑郁和家族诅咒中长大，成为锈湖永生仪式的最终祭品。她一生都被精神疾病困扰，不断被过去的阴影纠缠，最终在锈湖的轮回中迎来了早已注定的结局。<a href="#顶部1">返回顶部</a></p>
+		</td>
+	</tr>
+	<!-- Frank -->
+	<tr id="Frank">
+		<td class="td-img"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('3','','image/屏幕截图 2026-06-14 142650.png',1)"><img src="image/屏幕截图 2026-06-14 142612.png" width="218" height="217" id="3"></a></td>
+		<td class="td-text">
+			<h3>Frank<a name="F1" id="F1"></a></h3>
+			<p>弗兰克是 Emma Vanderboom 未婚生下的儿子，也是家族悲剧的直接受害者。7 岁时，他被心怀怨恨的叔叔 Albert 推入枯井，被囚禁了整整 33 年。在暗无天日的井底，他靠吃虫子和雨水活了下来，被救出时已是一个枯瘦、眼神空洞的男人。重获自由后，他亲手杀死了 Albert 复仇，随后参与了复活 William 的仪式，最终在仪式中失去了生命。<a href="#顶部1">返回顶部</a></p>
+		</td>
+	</tr>
+	<!-- Leonard -->
+	<tr id="Leonard">
+		<td class="td-img"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image10','','image/屏幕截图 2026-06-14 142839.png',1)"><img src="image/屏幕截图 2026-06-14 142746.png" width="219" height="184" id="Image4"></a></td>
+		<td class="td-text">
+			<h3>Leonard<a name="L1" id="L1"></a></h3>
+			<p>伦纳德是 Samuel 和 Ida 的儿子，从小就目睹了父母被叔叔 Albert 杀害的惨剧。长大后他参军参加一战，在战场上被手榴弹炸断了一条腿，带着战争创伤回到锈湖。他一生都在寻找家族宝藏，最终在 Rose 的引导下，参与了复活 William 的仪式，献出了自己的生命，成为永生仪式的又一件祭品。<a href="#顶部1">返回顶部</a></p>
+		</td>
+	</tr>
+	<!-- Rose -->
+	<tr id="Rose">
+		<td class="td-img"><img src="image/屏幕截图 2026-06-14 142640.png" width="218" height="202"></td>
+		<td class="td-text">
+			<h3>Rose<a name="R1" id="R"></a></h3>
+			<p>Rose 是 Albert Vanderboom 用巫术制造的孩子，由 Albert 的精子和嫂子 Ida 的卵子结合诞生。她从小就能通灵，与 William 的亡灵对话，得知了复活仪式的真相。她救出了被囚禁的 Frank，策划并主导了复活 William 的整个仪式，亲手将自己的女儿 Laura 推向了永生轮回的命运。她是家族中最清醒、也最冷酷的执行者，既是 Albert 的女儿，也是锈湖宿命的推手。<a href="#顶部1">返回顶部</a></p>
+		</td>
+	</tr>
+	<!-- Emma -->
+	<tr id="Emma">
+		<td class="td-img"><img src="image/屏幕截图 2026-06-14 142621.png" width="220" height="193"></td>
+		<td class="td-text">
+			<h3>Emma<a name="E1" id="E"></a></h3>
+			<p>Emma 是 James 和 Mary 的三胞胎之一，也是 Frank 的母亲。她天生对植物有着异常的天赋，17 岁时被一朵神秘的花 &ldquo;授粉&rdquo;，未婚生下了儿子 Frank。儿子被推入井中失踪后，她崩溃地寻找了多年，最终绝望地在家族的树上上吊自杀。她的眼泪被作为永生仪式的祭品取下，成为家族献祭的一部分。<a href="#顶部1">返回顶部</a></p>
+		</td>
+	</tr>
+	<!-- Ida -->
+	<tr id="Ida">
+		<td class="td-img"><img src="image/屏幕截图 2026-06-14 142903.png" width="218" height="205"></td>
+		<td class="td-text">
+			<h3>Ida<a name="I11" id="I1"></a></h3>
+			<p>Ida 是 Samuel 的妻子，也是一名来自异国的占卜师。她通过塔罗牌和水晶球，早已预见了范德布姆家族的悲惨命运，却无法逃脱宿命。她被暗恋她的小叔子 Albert 用巫毒娃娃杀害，死后她的卵子被 Albert 取走，用来制造了 Rose。她的眼睛也被取下，作为复活仪式的祭品，成为家族永生的垫脚石。<a href="#顶部1">返回顶部</a></p>
+		</td>
+	</tr>
+	<!-- Samuel -->
+	<!-- Albert -->
+	<!-- Mary -->
+	<!-- James -->
+</table>
+</body>
+</html>
